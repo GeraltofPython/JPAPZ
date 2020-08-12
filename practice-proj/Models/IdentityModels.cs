@@ -21,7 +21,7 @@ namespace practice_proj.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("JPAPZAzure", throwIfV1Schema: false)
         {
         }
 
