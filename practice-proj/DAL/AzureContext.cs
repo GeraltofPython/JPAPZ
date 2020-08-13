@@ -5,10 +5,10 @@ namespace practice_proj.DAL
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class StefanDB : DbContext
+    public partial class AzureContext : DbContext
     {
-        public StefanDB()
-            : base("name=JPAPZAzure")
+        public AzureContext()
+            : base("name=AzureContext")
         {
         }
 
@@ -16,6 +16,7 @@ namespace practice_proj.DAL
         public virtual DbSet<AspNetUserClaim> AspNetUserClaims { get; set; }
         public virtual DbSet<AspNetUserLogin> AspNetUserLogins { get; set; }
         public virtual DbSet<AspNetUser> AspNetUsers { get; set; }
+        public virtual DbSet<Sample> Samples { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
